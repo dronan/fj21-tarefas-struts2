@@ -5,20 +5,21 @@ import org.apache.struts2.convention.annotation.Result;
 
 import br.com.caelum.tarefas.jdbc.dao.TarefaDAO;
 
-public class RemoveTarefaAction {
-	
+public class FinalizaTarefaAction {
+
 	private Long id;
 	
-	@Action(value="removeTarefa", results={
+	@Action(value="finalizaTarefa", results={
 			@Result(name="ok", type="httpheader", params={"status", "200"})
-		})
+	})
 	public String execute(){
-		new TarefaDAO().removeId(id);
+		new TarefaDAO().finaliza(id);
 		return "ok";
 	}
-
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 	
 }

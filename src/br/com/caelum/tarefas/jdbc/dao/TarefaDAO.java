@@ -156,5 +156,17 @@ public class TarefaDAO {
 			throw new RuntimeException(e);
 		}
 	}
+	
+
+	public void removeId(long id) {
+		String sql = "delete from tarefas where id="+id;
+		try {
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.execute();
+			stmt.close();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}	
 
 }
