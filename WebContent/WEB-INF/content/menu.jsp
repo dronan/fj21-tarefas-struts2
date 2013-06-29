@@ -10,5 +10,7 @@
 <h2>Pagina de lista de tarefas</h2>
 <p>Bem vindo, ${usuarioLogado.usuario}</p>
 <a href="listaTarefas">Clique aqui</a> para acessar a lista de tarefas
+<br><br>
+<a href="efetuaLogoff">Logoff</a> do sistema
 </body>
 </html>
